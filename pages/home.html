@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Multipage Education Website</title>
-    <link rel="stylesheet" href="./home.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="../styles/home.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -38,7 +42,7 @@
           <a href="courses.html" class="btn btn-primary">Get Started</a>
         </div>
         <div class="header-right">
-          <img src="./image/header.svg" alt="logo" />
+          <img src="../image/header.svg" alt="logo" />
         </div>
       </div>
     </header>
@@ -99,7 +103,7 @@
       <h2>Our Popular Courses</h2>
       <div class="container courses-container">
         <article class="course">
-          <div class="course-img"><img src="./course1.jpg" alt="logo" /></div>
+          <div class="course-img"><img src="../image/course1.jpg" alt="logo" /></div>
           <div class="course-info">
             <h4>Responsive Social Media Website UI Design</h4>
             <p>
@@ -110,7 +114,7 @@
           </div>
         </article>
         <article class="course">
-          <div class="course-img"><img src="./course2.jpg" alt="" /></div>
+          <div class="course-img"><img src="../image/course2.jpg" alt="" /></div>
           <div class="course-info">
             <h4>Responsive SmartHome Website Design</h4>
             <p>
@@ -121,7 +125,7 @@
           </div>
         </article>
         <article class="course">
-          <div class="course-img"><img src="./course3.jpg" alt="" /></div>
+          <div class="course-img"><img src="../image/course3.jpg" alt="" /></div>
           <div class="course-info">
             <h4>Responsive Admin Dashboard UI Design</h4>
             <p>
@@ -216,12 +220,12 @@
 
       </div>
     </section>
-    <section class="container testimonials-container">
+    <section class="container testimonials-container swiper mySwiper">
       <h2>Students' Testimonials</h2>
-      <div class="testimonials">
-        <article class="testimonial">
+      <div class="testimonials swiper-wrapper">
+        <article class="testimonial swiper-slide">
           <div class="avatar">
-            <img src="./image/avatar1.jpg">
+            <img src="../image/avatar1.jpg">
           </div>
           <div class="test-info">
             <h5>Diana Ayi</h5>
@@ -232,9 +236,9 @@
           </div>
         </article>
 
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
           <div class="avatar">
-            <img src="./image/avatar2.jpg">
+            <img src="../image/avatar2.jpg">
           </div>
           <div class="test-info">
             <h5>Ernest Achiever</h5>
@@ -245,9 +249,9 @@
           </div>
         </article>
 
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
           <div class="avatar">
-            <img src="./image/avatar3.jpg">
+            <img src="../image/avatar3.jpg">
           </div>
           <div class="test-info">
             <h5>Edem Quist</h5>
@@ -258,9 +262,9 @@
           </div>
         </article>
 
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
           <div class="avatar">
-            <img src="./image/avatar4.jpg">
+            <img src="../image/avatar4.jpg">
           </div>
           <div class="test-info">
             <h5>Hajia Bintu</h5>
@@ -271,9 +275,9 @@
           </div>
         </article>
 
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
           <div class="avatar">
-            <img src="./image/avatar5.jpg">
+            <img src="../image/avatar5.jpg">
           </div>
           <div class="test-info">
             <h5>Jane Doe</h5>
@@ -284,6 +288,7 @@
           </div>
         </article>
       </div>
+      <div class="swiper-pagination"></div>
     </section>
 
     <footer>
@@ -328,5 +333,24 @@
       </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../main.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,},
+          breakpoints: {
+            600: {
+              slidesPerView: 2,
+            }
+          }
+        },
+      );
+    </script>
   </body>
 </html>
